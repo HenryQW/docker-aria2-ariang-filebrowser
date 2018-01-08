@@ -17,4 +17,4 @@ docker run -d \
 wangqiru/aria2-with-ariang
 ```
 
-Note: rpc **does not work** behind CloudFlare, only webui does.
+Note: rpc over https **does not work** behind CloudFlare, only webui does.
