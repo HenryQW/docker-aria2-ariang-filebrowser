@@ -2,9 +2,9 @@
 
 - AriaNg Webui: https://github.com/mayswind/AriaNg
 
-- ENV: RPC_SECRET=[please enter your own token, this is important!!!]
+- ENV: RPC_SECRET = [please enter your own token, this is important!!!]
 
-- ENV: RPC_SECURE=[true|false], default [false]. This enables SSL for aria2 RPC.
+- ENV: RPC_SECURE = [true | false], default [false]. This enables SSL for aria2 RPC.
 
 Example:
 ```
