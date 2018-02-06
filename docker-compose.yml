@@ -1,0 +1,26 @@
+version: "3"  
+services:
+    aria2:
+      image: wangqiru/aria2-with-ariang:latest
+      container_name: aria
+      ports:
+        - 6800:6800
+        - [YOUR PORT]:80 # port for ariang webui
+      environment: 
+        - RPC_SECRET = [YOUR TOKEN]
+        - RPC_SECURE = true
+      volumes:
+        - [YOUR VOLUME]:/data
+        - [YOUR CONF]:/etc/aria2/aria2.conf
+        - [YOUR PRIVATE KEY]:/root/conf/key/aria2.key
+        - [YOUR CERT]:/root/conf/key/aria2.crt
+      restart: always
+    
+    filemanager:
+      image: hacdias/filemanager:latest
+      container_name: fm
+      ports:
+        - [YOUR PORT]:80 # port for file manager webui
+      volumes:
+        - [YOUR VOLUME]:/srv # must use the same [YOUR VOLUME] as aria2
+      restart: always
